@@ -97,3 +97,28 @@ Non-functional criteria can be used to constrain or limit the design of a system
 \item It's difficult to change non-functional items after the architectural phase is finished.
 \end{itemize}
 
+\section{Implementation}
+
+The original data set was increased offline to create this data set. The original dataset is included in this project. This dataset contains roughly 87K pictures of healthy and damaged crop leaves divided into 38 classifications. To preserve the directory's structure, the complete data set is split into 80/20 training and validation ratios. A fresh directory with 33 test images will be released later.
+
+Convolution covnets, or computational neural networks, are neural networks with shared parameters.
+
+Layers are classified as follows:
+
+\begin{enumerate}
+\item The input layer
+\item Convolutional Layer
+\item The Layers' Activation
+\item The layer of a swimming pool
+\item A layer that is completely connected
+\end{enumerate}
+
+\begin{figure}[]
+\includegraphics{Capture}
+\caption{CNN Layer}
+\end{figure}
+
+The image's raw input is stored on this layer, which has a width of 32 pixels, a height of 32 pixels, and a depth of three pixels.
+The output volume is computed by computing the dot product between all filters and the image patch in the convolution layer. This layer's output volume will be 32 × 32 x 12 if we use a total of 12 filters.
+
+This layer will apply an element-by-element activation function to the output of the convolution layer. Frequent activation functions include RELU:max(0,x),Sigmoid: $\frac{1}{1+e^{-x}}$
