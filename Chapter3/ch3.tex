@@ -121,4 +121,68 @@ Layers are classified as follows:
 The image's raw input is stored on this layer, which has a width of 32 pixels, a height of 32 pixels, and a depth of three pixels.
 The output volume is computed by computing the dot product between all filters and the image patch in the convolution layer. This layer's output volume will be 32 × 32 x 12 if we use a total of 12 filters.
 
-This layer will apply an element-by-element activation function to the output of the convolution layer. Frequent activation functions include RELU:max(0,x),Sigmoid: $\frac{1}{1+e^{-x}}$
+This layer will apply an element-by-element activation function to the output of the convolution layer. Frequent activation functions include RELU:max(0,x),Sigmoid: $\dfrac{1}{1+e^{-x}}$,Tanh, Leaky RELU, and others.
+
+\section{SOFTWARE OVERVIEW}
+
+\subsection{History of Python}
+
+Guido van Rossum worked on Python in the Netherland's National Research
+Institute for Mathematics and Computers in the late 1980s and early 1990s. Python
+is based on ABC, Modula-3, C, C++, Algol-68, SmallTalk, Unix, and other
+languages.
+Python is a free and open-source programming language. Python source code is
+now available under the GNU General Public License, just like Perl (GPL).
+Despite the fact that the Institute's core development team now utilises Python,
+Guido van Rossum remains instrumental in his development.
+
+\subsection{Input as CSV File}
+
+The ability to read CSV data is essential in the field of data science. We routinely
+acquire data from a variety of sources and convert it to CSV format so that it may
+be used by other systems. The Panadas library provides routines for reading a CSV
+file in its entirety as well as in segments for a single column and row group.
+The CSV file is a text file with commas between the values of columns. Examine
+the information in the input.csv file. The data can be copied and pasted into
+Windows Notepad to produce this file. Using Notepad's Save As All Files (*.*)
+option, save the file as input.csv.
+
+
+\begin{tcolorbox}
+\begin{minted}{python}
+import pandas as pd
+data = pd.read_csv("path/input.csv")
+print (data)
+\end{minted}
+\end{tcolorbox}
+
+\subsection{Operations using Numpy}
+
+Python is a programming language. The NumPy package stands for 'Numerical
+Python'. It's a collection of multidimensional array objects and algorithms for
+handling them.
+The developer can use NumPy to perform the following tasks.
+
+\begin{itemize}
+\item Array operations
+\item Shape algorithms are transformed and manipulated using Fourier transforms.
+\item Algebraic operations in linear form. NumPy has built-in random number
+generators and linear algebra functions.
+
+\end{itemize}
+
+\subsection{Key Features of Pandas}
+
+\begin{itemize}
+\item DataFrame objects are quick and efficient because to adjustable indexing and a
+default.
+\item Tools for importing data into RAM data objects from a variety of file types.
+\item Data synchronisation and integrated data management
+\item You may pivot and modify your date settings.
+\item Labeling, indexing, and sub-setting large data sets
+\item The columns in the data structure can be removed or added.
+\item Data is grouped via aggregation and transformation.
+\item Data combining and combining with high performance.
+\item Time Series is a useful tool
+\end{itemize}
+
